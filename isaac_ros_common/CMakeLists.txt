@@ -38,7 +38,7 @@ option(USE_NVTX "Enable NVTX markers for improved profiling (if available)" ON)
 if(USE_NVTX)
     add_definitions(-DUSE_NVTX)
     link_directories("${CUDA_TOOLKIT_ROOT_DIR}/lib64")
-    link_libraries("CUDA::nvtx3")
+    link_libraries("CUDA::nvToolsExt")
 endif()
 
 # vpi utilities
